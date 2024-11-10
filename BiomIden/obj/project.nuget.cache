@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "JpVUuIGP2p6uC1rgHvEF/Nz9X0iw/broIJpiLtx9LGq+ITb+Jty9L3Pcxvgu4bCth8imioQYlX1Tom2sA0rUNA==",
+  "dgSpecHash": "HF8Ynkj6DYimrvKYBrSAyHDloMn/cm9pHeM39YWNOL4AnTdNlgGojMYVTUsEb5a6tcRubM8DC47lwOWUtcr2Cg==",
   "success": true,
   "projectFilePath": "E:\\VamPipo\\repos\\BiomIden\\BiomIden\\BiomIden.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pedro\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\system.drawing.common\\8.0.10\\system.drawing.common.8.0.10.nupkg.sha512"
+  ],
   "logs": []
 }
