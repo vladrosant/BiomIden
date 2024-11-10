@@ -8,7 +8,7 @@ namespace BiomIden
         static void Main(string[] args)
         {
             // Example usage
-            Bitmap imagem = new Bitmap("path_to_image.jpg");
+            Bitmap imagem = new Bitmap("E:\\VamPipo\\repos\\BiomIden\\BiomIden\\sample.jpg");
             Bitmap imagemCinza = ProcessamentoDeImagem.ConverterParaEscalaDeCinza(imagem);
             Bitmap imagemEqualizada = ProcessamentoDeImagem.EqualizarHistograma(imagemCinza);
             Bitmap imagemAjustada = ProcessamentoDeImagem.AjustarBrilhoEContraste(imagemEqualizada, 1.2, 10);

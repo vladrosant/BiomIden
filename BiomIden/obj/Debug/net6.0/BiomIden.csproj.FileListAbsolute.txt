@@ -1,0 +1,5 @@
+E:\VamPipo\repos\BiomIden\BiomIden\obj\Debug\net6.0\BiomIden.csproj.AssemblyReference.cache
+E:\VamPipo\repos\BiomIden\BiomIden\obj\Debug\net6.0\BiomIden.GeneratedMSBuildEditorConfig.editorconfig
+E:\VamPipo\repos\BiomIden\BiomIden\obj\Debug\net6.0\BiomIden.AssemblyInfoInputs.cache
+E:\VamPipo\repos\BiomIden\BiomIden\obj\Debug\net6.0\BiomIden.AssemblyInfo.cs
+E:\VamPipo\repos\BiomIden\BiomIden\obj\Debug\net6.0\BiomIden.csproj.CoreCompileInputs.cache

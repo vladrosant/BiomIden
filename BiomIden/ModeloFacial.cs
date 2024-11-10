@@ -55,35 +55,20 @@ namespace BiomIden
             var (regiaoOlho, regiaoBoca) = ExtraiCaracteristicasFaciais(imagemBordas);
 
             ModeloFacial modelo = new ModeloFacial(regiaoOlho, regiaoBoca, userId);
-            GravaArquivoModelo(modelo, $"modelo_{userId}.json");
+            GravaArquivoModelo(modelo, $"E:\\VamPipo\\repos\\BiomIden\\BiomIden\\modelo_{userId}.json");
             return modelo;
-        }
-
-        public static ModeloFacial CarregaModelo(string filePath)
-        {
-            string json = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<ModeloFacial>(json);
-        }
-
-        // Função para autenticação facial
-        public static bool Autenticador(int[,] imagemEntrada, ModeloFacial modeloCarregado)
-        {
-            // Extrair características da imagem de entrada
-            int[,] edgeImage = FiltroSobel(imagemEntrada);
-            var (eyeRegion, mouthRegion) = ExtractFacialFeatures(edgeImage);
-
-            // Comparar com o modelo armazenado
-            bool eyesMatch = Math.Abs(eyeRegion - modeloCarregado.EyeRegionIntensity) < 50;
-            bool mouthMatch = Math.Abs(mouthRegion - modeloCarregado.MouthRegionIntensity) < 50;
-
-            // Retorna true se as duas regiões forem consideradas "correspondentes"
-            return eyesMatch && mouthMatch;
         }
 
         public static void GravaArquivoModelo(ModeloFacial modelo, string caminhoArquivo)
         {
             string json = JsonConvert.SerializeObject(modelo, Formatting.Indented);
             File.WriteAllText(caminhoArquivo, json);
+        }
+
+        public static ModeloFacial CarregaModelo(string filePath)
+        {
+            string json = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<ModeloFacial>(json);
         }
     }
 }

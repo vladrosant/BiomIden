@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomIden", "BiomIden\BiomIden.csproj", "{BE5D200F-7F32-4BFE-837D-D1B61B470B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomIden", "BiomIden\BiomIden.csproj", "{3A8D6AFD-F5D0-4DFA-B72D-8357347D735B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BE5D200F-7F32-4BFE-837D-D1B61B470B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE5D200F-7F32-4BFE-837D-D1B61B470B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE5D200F-7F32-4BFE-837D-D1B61B470B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE5D200F-7F32-4BFE-837D-D1B61B470B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8D6AFD-F5D0-4DFA-B72D-8357347D735B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8D6AFD-F5D0-4DFA-B72D-8357347D735B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8D6AFD-F5D0-4DFA-B72D-8357347D735B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8D6AFD-F5D0-4DFA-B72D-8357347D735B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {37BC1A9A-8825-42FE-86C2-BA2959CAEDB7}
+		SolutionGuid = {7E387ECB-5536-444F-BAF1-A4791B62DDE7}
 	EndGlobalSection
 EndGlobal
