@@ -8,26 +8,26 @@ namespace BiomIden
     {
         public int IntensidadeRegiaoOlho { get; set; }
         public int IntensidadeRegiaoBoca { get; set; }
-        public string UserId { get; set; }
+        public string UsuarioId { get; set; }
 
-        public ModeloFacial(int regiaoOlho, int regiaoBoca, string userId)
+        public ModeloFacial(int regiaoOlho, int regiaoBoca, string usuarioId)
         {
             IntensidadeRegiaoOlho = regiaoOlho;
             IntensidadeRegiaoBoca = regiaoBoca;
-            UserId = userId;
+            UsuarioId = usuarioId;
         }
 
         public static (int regiaoOlho, int regiaoBoca) ExtraiCaracteristicasFaciais(int[,] imagemBordas)
         {
-            int width = imagemBordas.GetLength(0);
-            int height = imagemBordas.GetLength(1);
+            int largura = imagemBordas.GetLength(0);
+            int altura = imagemBordas.GetLength(1);
 
             int regiaoOlho = 0;
             int regiaoBoca = 0;
 
-            for (int y = 0; y < height / 2; y++)
+            for (int y = 0; y < altura / 2; y++)
             {
-                for (int x = width / 4; x < 3 * width / 4; x++)
+                for (int x = largura / 4; x < 3 * largura / 4; x++)
                 {
                     if (imagemBordas[x, y] > 128)
                     {
@@ -36,9 +36,9 @@ namespace BiomIden
                 }
             }
 
-            for (int y = height / 2; y < height; y++)
+            for (int y = altura / 2; y < altura; y++)
             {
-                for (int x = width / 4; x < 3 * width / 4; x++)
+                for (int x = largura / 4; x < 3 * largura / 4; x++)
                 {
                     if (imagemBordas[x, y] > 128)
                     {
@@ -49,13 +49,13 @@ namespace BiomIden
             return (regiaoOlho, regiaoBoca);
         }
 
-        public static ModeloFacial CriaModeloFacial(int[,] imagemReferencia, string userId)
+        public static ModeloFacial CriaModeloFacial(int[,] imagemReferencia, string usuarioId)
         {
             int[,] imagemBordas = ProcessamentoDeImagem.FiltroSobel(imagemReferencia);
             var (regiaoOlho, regiaoBoca) = ExtraiCaracteristicasFaciais(imagemBordas);
 
-            ModeloFacial modelo = new ModeloFacial(regiaoOlho, regiaoBoca, userId);
-            GravaArquivoModelo(modelo, $"E:\\VamPipo\\repos\\BiomIden\\BiomIden\\modelo_{userId}.json");
+            ModeloFacial modelo = new ModeloFacial(regiaoOlho, regiaoBoca, usuarioId);
+            GravaArquivoModelo(modelo, $"E:\\VamPipo\\repos\\BiomIden\\BiomIden\\modelo_{usuarioId}.json");
             return modelo;
         }
 
@@ -65,9 +65,9 @@ namespace BiomIden
             File.WriteAllText(caminhoArquivo, json);
         }
 
-        public static ModeloFacial CarregaModelo(string filePath)
+        public static ModeloFacial CarregaModelo(string caminhoArquivo)
         {
-            string json = File.ReadAllText(filePath);
+            string json = File.ReadAllText(caminhoArquivo);
             return JsonConvert.DeserializeObject<ModeloFacial>(json);
         }
     }

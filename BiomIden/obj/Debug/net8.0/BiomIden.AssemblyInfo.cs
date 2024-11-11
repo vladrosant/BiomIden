@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BiomIden")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9741b32e3025e222552cc9eb19ab3bfdbc2a8496")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11402cae9b02ccd45191071c75aea4a94bda7c11")]
 [assembly: System.Reflection.AssemblyProductAttribute("BiomIden")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BiomIden")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

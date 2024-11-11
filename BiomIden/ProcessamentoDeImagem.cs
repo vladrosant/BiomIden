@@ -44,9 +44,9 @@ namespace BiomIden
 
         public static int[,] FiltroSobel(int[,] imagemCinza)
         {
-            int width = imagemCinza.GetLength(0);
-            int height = imagemCinza.GetLength(1);
-            int[,] imagemBordas = new int[width, height];
+            int largura = imagemCinza.GetLength(0);
+            int altura = imagemCinza.GetLength(1);
+            int[,] imagemBordas = new int[largura, altura];
 
             int[,] sobelX = new int[,]
             {
@@ -62,9 +62,9 @@ namespace BiomIden
                 { 1, 2, 1 }
             };
 
-            for (int y = 1; y < height - 1; y++)
+            for (int y = 1; y < altura - 1; y++)
             {
-                for (int x = 1; x < width - 1; x++)
+                for (int x = 1; x < largura - 1; x++)
                 {
                     int gx = 0;
                     int gy = 0;
